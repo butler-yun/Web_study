@@ -1,0 +1,10 @@
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
+.showing {
+    display: inline-block !important;
+}
