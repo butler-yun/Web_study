@@ -9,21 +9,22 @@
 }
 
 .header .wrap {
-    position: relative;
     max-width: 1280px;
     width: 100%;
     margin: 0 auto;
 }
 
-.header .wrap h1 a {
-    position: absolute;
-    top: 22px;
-    left: 20px;
-}
 
 /* ********** util menu ********** */
 .gnb .gnb__utilmenu {
     font-size: 14px;
+    position: relative;
+}
+
+.gnb .gnb__utilmenu h1 {
+    position: absolute;
+    top: 22px;
+    left: 20px;
 }
 
 .gnb__utilmenu>ul {
@@ -107,6 +108,11 @@
     background-color: #2C2A29;
 }
 
+.gnb__mainmenu>ul>li:hover .gnb__submenu.submenu{
+    max-height: 500px;
+    transition: max-height 0.5s linear;
+}
+
 
 /* ********** gnb submenu ********** */
 .gnb__submenu.submenu{
@@ -114,7 +120,17 @@
     width: 100%;
     top: 100%;
     left: 0;
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s linear;
+}
+
+.gnb__submenu.submenu .submenu__topArea{
+    background-color: #2C2A29;
+}
+
+.gnb__submenu.submenu .submenu__bottomArea{
+    background-image: url(../images/gnb_sub_txbg.jpg);
 }
 
 .gnb__mainmenu>ul>li:hover .gnb__submenu.submenu{
@@ -122,37 +138,21 @@
 }
 
 .gnb__submenu.submenu .submenu__top{
+    max-width: 1280px;
+    margin:0 auto;
     padding: 20px;
-    background-color: #2C2A29;
-    position: relative;
 }
-
-.gnb__submenu.submenu .submenu__top::before{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    background-color: #2C2A29;
-}
-
-.gnb__submenu.submenu .submenu__top::after{
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 100%;
-    background-color: #2C2A29;
-}
-
 
 .submenu__top>ul {
     display: inline-block;
-    width: 25%;
+    width: 20%;
     vertical-align: top;
 }
+
+.submenu__top>ul:first-child {
+    margin-bottom: 50px;
+}
+
 
 .submenu__top ul li a{
     color: #999;
@@ -180,40 +180,19 @@
 }
 
 .submenu__bottom {
-    position: relative;
-    background-image: url(../images/gnb_sub_txbg.jpg);
-    width: 100%;
     padding: 20px;
-    box-sizing: border-box;
+    max-width: 1280px;
+    margin: 0 auto;
 }
 
-.submenu__bottom::before {
-    background-image: url(../images/gnb_sub_txbg.jpg);
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: -100%;
-    background-color: #2C2A29;
+.submenu__bottom li a {
+    vertical-align: middle;
 }
-
-.submenu__bottom::after {
-    background-image: url(../images/gnb_sub_txbg.jpg);
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 100%;
-    background-color: #2C2A29;
-}
-
 
 .submenu__bottom li a {
     color: #999;
     font-weight: 900;
-    display: block;
+    display: inline-block;
     padding: 5px 0;
 }
 
