@@ -8,3 +8,8 @@
 .showing {
     display: inline-block !important;
 }
+
+.show {
+    left: 0 !important;
+    transition: left .5s linear;
+}

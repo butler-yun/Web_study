@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minumum-scale=1.0, maximum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Starbucks</title>
     <!-- If IE -->
@@ -16,6 +16,7 @@
     <header class="header">
         <!-- logo-->
         <div class="wrap">
+            <!-- desktop -->
             <nav class="gnb">
                 <div class="gnb__utilmenu clearfix">
                     <h1>
@@ -733,6 +734,192 @@
                     </ul>
                 </div>
             </nav>
+
+            <!-- tablet and mobile -->
+            <nav class="tabletGnb clearfix">
+                <h1>
+                    <a href="index.html">
+                        <img src="images/logo.png" alt="Starbucks logo">
+                    </a>
+                </h1>
+                <ul class="tabletGnb__utilmenu">
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="tabletGnb__trigger" href="#">
+                            <i class="fas fa-bars"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="tabletSubmenu">
+                <div class="tabletSubmenu__search search">
+                    <div class="search__box">
+                        <input type="text" placeholder="Please enter a search term.">
+                        <button class="search__btn btn">Search</button>
+                    </div><!--
+                 --><div class="search__closeBtn">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="tabletSubmenu__utilmenu">
+                    <ul class="utilmenu">
+                        <li class="utilmenu__top">
+                            <a href="#">
+                                Coffee
+                                <span class="utilmenu__btnArrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </a>
+                            <ul class="utilmenu_2dep">
+                                <li class="">
+                                    <a href="#">
+                                        커피
+                                        <span class="utilmenu__btnArrow">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="utilmenu_3dep">
+                                        <li>
+                                            <a href="#">스타벅스 원두</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">스타벅스 비아</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">스타벅스 오리가미</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        나와 어울리는 커피
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        스타벅스 리저브
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        에스프레소 음료
+                                        <span class="utilmenu__btnArrow">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="utilmenu_3dep">
+                                        <li>
+                                            <a href="#">도피오</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">에스프레소 마키아또</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">아메리카노</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">마키아또</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        최상의 커피를 즐기는 법
+                                        <span class="utilmenu__btnArrow">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="utilmenu_3dep">
+                                        <li>
+                                            <a href="#">커피 프레스</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">푸어 오버</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">아이스 푸어오버</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        커피 이야기
+                                        <span class="utilmenu__btnArrow">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </a>
+                                    <ul class="utilmenu_3dep">
+                                        <li>
+                                            <a href="#">스타벅스 로스트 스팩트럼</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">최상의 아라비카 원두</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">한 잔의 커피가 완성되기까지</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">클로버 커피 추출 시스템</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">스타벅스 디카페인</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="utilmenu__top">
+                            <a href="#">
+                                Menu
+                                <span class="utilmenu__btnArrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="utilmenu__top">
+                            <a href="#">
+                                Store
+                                <span class="utilmenu__btnArrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="utilmenu__top">
+                            <a href="#">
+                                Responsibility
+                                <span class="utilmenu__btnArrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="utilmenu__top">
+                            <a href="#" >
+                                My starbucks rewards
+                                <span class="utilmenu__btnArrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </a>
+                        </li>
+                        <li class="utilmenu__top">
+                            <a href="#">
+                                What's new
+                                <span class="utilmenu__btnArrow">
+                                    <i class="fas fa-chevron-down"></i>
+                                </span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </header>
     <!-- content-->
@@ -744,5 +931,6 @@
     <!-- footer -->
     <footer class="footer"></footer>
     <script src="js/search.js"></script>
+    <script src="js/isActiveSubmenu.js"></script>
 </body>
 </html>
