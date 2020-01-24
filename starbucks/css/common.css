@@ -5,12 +5,25 @@
 }
 
 
-.d_inline_bl {
+.d_inline_block {
     display: inline-block !important;
     width: 180px;
+}
+
+.d_block {
+    display: block !important;
 }
 
 .show {
     left: 0 !important;
     transition: left .5s linear;
+}
+
+.rotate_arrow {
+    transform: rotate(180deg);
+    transition: transform .2s linear;
+}
+
+.overflow_hidden {
+    overflow: hidden;
 }

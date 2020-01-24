@@ -363,6 +363,15 @@
         right: 20px;
     }
 
+    .tabletSubmenu .utilmenu_2dep, .tabletSubmenu .utilmenu_3dep{
+        display: none;
+    }
+
+    .tabletSubmenu .utilmenu__btnArrow{
+        transition: transform .2s linear;
+    }
+    
+
 }
 
 /* ********** min-width 960px ********** */

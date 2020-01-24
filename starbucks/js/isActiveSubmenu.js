@@ -1,31 +1,34 @@
-const hambugBtn = document.querySelector('.tabletGnb__trigger');
+const body = document.querySelector('body');
 const submenu = document.querySelector('.tabletSubmenu');
+const hambugBtn = document.querySelector('.tabletGnb__trigger');
 const closeBtn = document.querySelector('.search__closeBtn');
-const topMenu = document.querySelector('.utilmenu__top');
-const dep_2 = document.querySelector('.utilmenu_2dep');
-const dep_3 = document.querySelector('.utilmenu_3dep');
 
 const SHOW_CN = 'show';
-const ON = 'on'
+const OVERFLOW_HIDDEN = 'overflow_hidden';
+const ON = 'd_block';
+const ROTATE_CN = 'rotate_arrow';
 
 const showSubmenu = () => {
     submenu.classList.add(SHOW_CN);
+    body.classList.add(OVERFLOW_HIDDEN);
 }
 
 const hideSubmenu = () => {
     submenu.classList.remove(SHOW_CN);
+    body.classList.remove(OVERFLOW_HIDDEN);
 }
 
-const show2DepMenu = (event) => {
-    const target = event.target.parentNode;
-    target.classList.add(ON);
-
+const isActiveSubmenu = (event) => {
+    const target = event.target;
+    const sibling = target.nextElementSibling;
+    const childArrow = target.children[0];
+    sibling.classList.toggle(ON);
+    childArrow.classList.toggle(ROTATE_CN)
 }
 
 function init(){
     hambugBtn.addEventListener('click', showSubmenu);
     closeBtn.addEventListener('click', hideSubmenu);
-    topMenu.addEventListener('click', show2DepMenu);
-    dep_2.addEventListener('click', show2DepMenu);
+    submenu.addEventListener('click', isActiveSubmenu);
 }
 init();
