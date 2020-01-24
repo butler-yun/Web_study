@@ -363,17 +363,6 @@
         right: 20px;
     }
 
-    .utilmenu_2dep, .utilmenu_3dep {
-        display: none;
-    }
-
-    .utilmenu__top.on .utilmenu_2dep{
-        display: block;
-    }
-
-    .utilmenu_2dep>li.on .utilmenu_3dep {
-        display: block;
-    }
 }
 
 /* ********** min-width 960px ********** */

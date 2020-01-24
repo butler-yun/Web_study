@@ -3,7 +3,7 @@ const btn = gnbSearch.querySelector('.btn');
 const input = gnbSearch.querySelector('input');
 
 
-const SEARCH_CL = 'showing';
+const SEARCH_CL = 'd_inline_bl';
 
 const handleSearch = () => {
     input.classList.add(SEARCH_CL);

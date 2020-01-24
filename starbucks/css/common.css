@@ -5,8 +5,9 @@
 }
 
 
-.showing {
+.d_inline_bl {
     display: inline-block !important;
+    width: 180px;
 }
 
 .show {

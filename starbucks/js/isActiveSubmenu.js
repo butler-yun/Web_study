@@ -27,6 +27,5 @@ function init(){
     closeBtn.addEventListener('click', hideSubmenu);
     topMenu.addEventListener('click', show2DepMenu);
     dep_2.addEventListener('click', show2DepMenu);
-
 }
 init();
