@@ -1,217 +1,3 @@
-/* ********** header ********** */
-.header {
-    background-color: #f6f5ef;
-    border-top: 3px solid #000;
-    position: sticky;
-    top: 0px;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-}
-
-.header .wrap {
-    max-width: 1280px;
-    width: 100%;
-    margin: 0 auto;
-}
-
-
-/* ********** util menu ********** */
-.gnb .gnb__utilmenu {
-    font-size: 14px;
-    position: relative;
-}
-
-.gnb .gnb__utilmenu h1 {
-    position: absolute;
-    top: 22px;
-    left: 20px;
-}
-
-.gnb__utilmenu>ul {
-    float: right;
-    padding: 10px 20px 10px 20px;
-}
-
-.gnb .gnb__utilmenu>ul>li {
-    float: left;
-}
-
-.gnb__utilmenu>ul>li>a {
-    text-decoration: none;
-    position: relative;
-    color: #555;
-    padding: 10px 15px;
-    display: block;
-}
-
-
-.gnb__utilmenu>ul>li>a::after {
-    content: '';
-    position: absolute;
-    left: 100%;
-    width: 1px;
-    height: 20px;
-    background: #ddd;
-}
-
-.gnb__utilmenu>ul>li:last-child a::after {
-    display: none;
-}
-
-.gnb__utilmenu>ul>li a:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-.gnb__utilmenu>ul>li:last-child a:hover {
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.gnb__utilmenu>ul>li.gnb__search i {
-    margin-left: 5px;
-}
-
-.gnb__utilmenu>ul>li.gnb__search a {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    margin-left: 15px;
-}
-
-.gnb__utilmenu>ul>li.gnb__search a input {
-    display: none;
-}
-
-/* ********** gnb mainmenu ********** */
-.gnb__mainmenu>ul {
-    float: right;
-    text-transform: uppercase;
-    font-size: 15px;
-}
-
-.gnb__mainmenu>ul>li {
-    float: left;
-}
-
-.gnb__mainmenu>ul>li>a {
-    padding: 20px 20px 40px 20px;
-    color: #333;
-    display: block;
-}
-
-.gnb__mainmenu>ul>li:hover a.gnb__mainmenu--grn{
-    color: #669900;
-}
-
-.gnb__mainmenu>ul>li:hover {
-    background-color: #2C2A29;
-}
-
-.gnb__mainmenu>ul>li:hover .gnb__submenu.submenu{
-    max-height: 500px;
-    transition: max-height 0.5s linear;
-}
-
-
-/* ********** gnb submenu ********** */
-.gnb__submenu.submenu{
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    left: 0;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.5s linear;
-}
-
-.gnb__submenu.submenu .submenu__topArea{
-    background-color: #2C2A29;
-}
-
-.gnb__submenu.submenu .submenu__bottomArea{
-    background-image: url(../images/gnb_sub_txbg.jpg);
-}
-
-.gnb__mainmenu>ul>li:hover .gnb__submenu.submenu{
-    display: block;
-}
-
-.gnb__submenu.submenu .submenu__top{
-    max-width: 1280px;
-    margin:0 auto;
-    padding: 20px;
-}
-
-.submenu__top>ul {
-    display: inline-block;
-    width: 20%;
-    vertical-align: top;
-}
-
-.submenu__top>ul:first-child {
-    margin-bottom: 50px;
-}
-
-
-.submenu__top ul li a{
-    color: #999;
-    font-size: 12px;
-    text-decoration: none;
-    display: block;
-    padding: 5px;
-}
-
-.submenu__top ul li a:hover{
-    color: #999;
-    text-decoration: underline;
-}
-
-.submenu__top .submenu__top--title a{
-    font-size: 16px;
-    color: #fff;
-    margin-bottom: 10px;
-}
-
-.submenu__top .submenu__top--title a:hover{
-    color: #fff;
-    text-decoration: underline;
-
-}
-
-.submenu__bottom {
-    padding: 20px;
-    max-width: 1280px;
-    margin: 0 auto;
-}
-
-.submenu__bottom li a {
-    vertical-align: middle;
-}
-
-.submenu__bottom li a {
-    color: #999;
-    font-weight: 900;
-    display: inline-block;
-    padding: 5px 0;
-}
-
-.submenu__bottom li.submenu__subtit a{
-    color: #669900;
-    font-weight: normal;
-}
-
-.submenu__bottom ul{
-    margin-bottom: 20px;
-}
-
-.submenu__bottom ul:last-child{
-    margin-bottom: 0px;
-}
-
-
-
 /* ********** content ********** */
 #content .hero {
     background-image: url(../images/hero_bg.jpg);
@@ -848,6 +634,46 @@
 }
 
 
+ /* ********** footer ********** */
+.footer {
+    background-color: #2C2A29;
+}
+
+.footer .footer__area {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    box-sizing: border-box;
+}
+
+.footer .footer__menus {
+    background-image: url('../images/footer_logo.png');
+    background-repeat: no-repeat;
+    background-position: right top;
+}
+
+.footer .footer__menus ul {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+
+.footer .footer__menus ul li {
+    margin-bottom: 15px;
+}
+
+.footer__menus ul li a{
+    color: #fff;
+}
+
+.footer__menus ul li.footer__list--title{
+    margin-bottom: 30px;
+}
+
+.footer__menus ul li.footer__list--title a{
+    font-size: 20px;
+    text-transform: uppercase;
+}
 
 /* ********** max-width 960px ********** */
 @media screen and (max-width: 960px) {

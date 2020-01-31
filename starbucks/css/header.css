@@ -1,0 +1,355 @@
+/* ********** header ********** */
+.header {
+    background-color: #f6f5ef;
+    border-top: 3px solid #000;
+    position: sticky;
+    top: 0px;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.header .wrap {
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+/* ********** util menu ********** */
+.gnb .gnb__utilmenu {
+    font-size: 14px;
+    position: relative;
+}
+
+.gnb .gnb__utilmenu h1 {
+    position: absolute;
+    top: 22px;
+    left: 20px;
+}
+
+.gnb__utilmenu>ul {
+    float: right;
+    padding: 10px 20px 10px 20px;
+}
+
+.gnb .gnb__utilmenu>ul>li {
+    float: left;
+}
+
+.gnb__utilmenu>ul>li>a {
+    text-decoration: none;
+    position: relative;
+    color: #555;
+    padding: 10px 15px;
+    display: block;
+}
+
+
+.gnb__utilmenu>ul>li>a::after {
+    content: '';
+    position: absolute;
+    left: 100%;
+    width: 1px;
+    height: 20px;
+    background: #ddd;
+}
+
+.gnb__utilmenu>ul>li:last-child a::after {
+    display: none;
+}
+
+.gnb__utilmenu>ul>li a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.gnb__utilmenu>ul>li:last-child a:hover {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.gnb__utilmenu>ul>li.gnb__search i {
+    margin-left: 5px;
+}
+
+.gnb__utilmenu>ul>li.gnb__search a {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin-left: 15px;
+}
+
+.gnb__utilmenu>ul>li.gnb__search a input {
+    display: none;
+}
+
+/* ********** gnb mainmenu ********** */
+.gnb__mainmenu>ul {
+    float: right;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.gnb__mainmenu>ul>li {
+    float: left;
+}
+
+.gnb__mainmenu>ul>li>a {
+    padding: 20px 20px 40px 20px;
+    color: #333;
+    display: block;
+}
+
+.gnb__mainmenu>ul>li:hover a.gnb__mainmenu--grn{
+    color: #669900;
+}
+
+.gnb__mainmenu>ul>li:hover {
+    background-color: #2C2A29;
+}
+
+.gnb__mainmenu>ul>li:hover .gnb__submenu.submenu{
+    max-height: 500px;
+    transition: max-height 0.5s linear;
+}
+
+
+/* ********** gnb submenu ********** */
+.gnb__submenu.submenu{
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s linear;
+}
+
+.gnb__submenu.submenu .submenu__topArea{
+    background-color: #2C2A29;
+}
+
+.gnb__submenu.submenu .submenu__bottomArea{
+    background-image: url(../images/gnb_sub_txbg.jpg);
+}
+
+.gnb__mainmenu>ul>li:hover .gnb__submenu.submenu{
+    display: block;
+}
+
+.gnb__submenu.submenu .submenu__top{
+    max-width: 1280px;
+    margin:0 auto;
+    padding: 20px;
+}
+
+.submenu__top>ul {
+    display: inline-block;
+    width: 20%;
+    vertical-align: top;
+}
+
+.submenu__top>ul:first-child {
+    margin-bottom: 50px;
+}
+
+
+.submenu__top ul li a{
+    color: #999;
+    font-size: 12px;
+    text-decoration: none;
+    display: block;
+    padding: 5px;
+}
+
+.submenu__top ul li a:hover{
+    color: #999;
+    text-decoration: underline;
+}
+
+.submenu__top .submenu__top--title a{
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.submenu__top .submenu__top--title a:hover{
+    color: #fff;
+    text-decoration: underline;
+
+}
+
+.submenu__bottom {
+    padding: 20px;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.submenu__bottom li a {
+    vertical-align: middle;
+}
+
+.submenu__bottom li a {
+    color: #999;
+    font-weight: 900;
+    display: inline-block;
+    padding: 5px 0;
+}
+
+.submenu__bottom li.submenu__subtit a{
+    color: #669900;
+    font-weight: normal;
+}
+
+.submenu__bottom ul{
+    margin-bottom: 20px;
+}
+
+.submenu__bottom ul:last-child{
+    margin-bottom: 0px;
+}
+
+/* ********** max-width 960px ********** */
+@media screen and (max-width: 960px) {
+    .header{
+        border: none;
+    }
+
+    .header nav.gnb{
+        display: none;
+    }
+
+
+    /* ********** tablet gnb ********** */
+    .header nav.tabletGnb {
+        display: block;
+        padding: 10px;
+        height: 50px;
+        border-bottom: 1px solid #e5e5e5;
+    }
+
+    .header nav.tabletGnb h1 {
+        position: absolute;
+        top: 14px;
+        left: 10px;
+    }
+
+
+    .header nav.tabletGnb img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .header .tabletSubmenu{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        background-color: #2d2926;
+        border-bottom: 1px solid #222;
+        color: white;
+        width: 100%;
+        height: 100vh;
+        overflow-y: auto;
+        transition: left .5s linear;
+    }
+
+    .header .tabletGnb__utilmenu {
+        float: right;
+    }
+
+    .header .tabletGnb__utilmenu li{
+        float: left;
+        width: 60px;
+        height: 60px;
+    }
+
+    .header .tabletGnb__utilmenu a{
+        display: block;
+        font-size: 35px;
+        width: 40px;
+        height: 40px;
+        line-height: 1.5;
+        text-align: center;
+        color: rgb(85, 68, 58);
+    }
+
+    .tabletSubmenu .tabletSubmenu__search {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+
+    .tabletSubmenu .tabletSubmenu__search div {
+        display: inline-block;
+    }
+
+    .tabletSubmenu__search .search__box {
+        width: 95%;
+        vertical-align: top;
+    }
+
+    .tabletSubmenu__search .search__closeBtn {
+        width: 5%;
+        cursor: pointer;
+    }
+
+    .tabletSubmenu__search .search__box input{
+        background-color: #fff;
+        height: 50px;
+        border-radius: 5px;
+        vertical-align: top;
+        width: calc( 100% - 170px);
+        padding: 10px;
+        box-sizing: border-box;
+        margin-right: 10px;
+    }
+
+    .tabletSubmenu__search .search__box .search__btn{
+        all: unset;
+        width: 125px;
+        height: 50px;
+        background-color: #666;'
+        color: #fff;
+        font-size: 24px;
+        border-radius: 3px;
+        text-align: center;
+    }
+
+    .tabletSubmenu__search .search__closeBtn{
+        font-size: 48px;
+        text-align: center;
+    }
+
+    .utilmenu .utilmenu__top>a, .utilmenu_2dep li a {
+        position: relative;
+        display: block;
+        width: 100%;
+        color: #fff;
+        font-size: 24px;
+        padding: 20px;
+        background-color: #111;
+        border-bottom: 1px solid #222;
+        box-sizing: border-box;
+    }
+
+    .utilmenu .utilmenu_3dep li a {
+        display: block;
+        font-size: 18px;
+        background-color: #222222;
+        color: #999;
+    }
+
+    .utilmenu .utilmenu__top>a .utilmenu__btnArrow, .utilmenu_2dep li a .utilmenu__btnArrow {
+        position: absolute;
+        right: 20px;
+    }
+
+    .tabletSubmenu .utilmenu_2dep, .tabletSubmenu .utilmenu_3dep{
+        display: none;
+    }
+
+    .tabletSubmenu .utilmenu__btnArrow{
+        transition: transform .2s linear;
+    }
+}
