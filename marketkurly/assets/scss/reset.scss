@@ -35,6 +35,8 @@ a {
     font-size:100%;
     vertical-align:baseline;
     background:transparent;
+    text-decoration: none;
+    color: inherit;
 }
 
 ins {
@@ -75,4 +77,11 @@ hr {
 
 input, select {
     vertical-align:middle;
+}
+
+button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
 }

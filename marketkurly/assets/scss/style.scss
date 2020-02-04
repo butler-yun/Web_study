@@ -1,2 +1,9 @@
 @import 'reset';
+@import 'variables';
+@import 'common';
 @import 'header';
+
+body {
+    font-family: 'Noto Sans', sans-serif, 'Noto Sans KR', sans-serif;
+    color: #333333;
+}
