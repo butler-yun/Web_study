@@ -146,6 +146,10 @@
                     float: left;
                     position: relative;
 
+                    &:hover .gnb__gnbmenu-2dep {
+                        opacity: 1;
+                    }
+
                     &::after {
                         content: '';
                         position: absolute;
@@ -177,7 +181,7 @@
                         }
                     }
 
-                    a {
+                    >a {
                         display: block;
                         padding: 20px 50px;
 
@@ -201,6 +205,86 @@
 
                         &:hover span::after {
                             opacity: 1;
+                        }
+                    }
+
+                    .gnb__gnbmenu-2dep {
+                        width: 220px;
+                        height: 640px;
+                        background-color: #fff;
+                        border: 1px solid #ddd;
+                        position: absolute;
+                        top: 100%;
+                        font-size: 0.875rem;
+                        opacity: 0;
+
+                        >li {
+
+                            >a {
+                                display: block;
+                                padding: 8px 15px;
+
+                                .gnb__gnbmenu-2dep--icon {
+                                    width: 24px;
+                                    height: 24px;
+                                    display: inline-block;
+                                    vertical-align: top;
+                                    position: relative;
+
+                                    img {
+                                        width: 100%;
+                                        position: absolute;
+                                        top: 0;
+                                        left: 0;
+                                        z-index: 20;
+
+                                        &:last-child {
+                                            z-index: 19;
+                                        }
+                                    }
+                                }
+
+                                .gnb__gnbmenu-2dep--txt {
+                                    height: 24px;
+                                    line-height: 24px;
+                                    margin-left: 5px;
+                                }
+
+                                &:hover {
+                                    color: #5f0080;
+                                    background-color: #f7f7f7;
+                                }
+
+                                &:hover img:last-child {
+                                    z-index: 21;
+                                }
+
+                                &:hover+.gnb__gnbmenu-3dep {
+                                    opacity: 1;
+                                    transition: opacity .2s linear;
+                                }
+
+                            }
+
+                            .gnb__gnbmenu-3dep {
+                                position: absolute;
+                                top: 0;
+                                left: 100%;
+                                width: 220px;
+                                height: 640px;
+                                background-color: #f7f7f7;
+                                opacity: 0;
+                                transition: opacity .2s linear;
+
+                                >li {
+                                    >a {
+                                        display: block;
+                                        height: 24px;
+                                        padding: 8px 15px;
+                                        line-height: 24px;
+                                    }
+                                }
+                            }
                         }
                     }
                 }
