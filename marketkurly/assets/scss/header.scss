@@ -147,7 +147,7 @@
                     position: relative;
 
                     &:hover .gnb__gnbmenu-2dep {
-                        opacity: 1;
+                        display: block;
                     }
 
                     &::after {
@@ -216,7 +216,7 @@
                         position: absolute;
                         top: 100%;
                         font-size: 0.875rem;
-                        opacity: 0;
+                        display: none;
 
                         >li {
 
