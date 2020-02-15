@@ -3,3 +3,21 @@
     display: block;
     clear: both;
 }
+
+.purple {
+    background-color: #5f0080;
+}
+
+.bg {
+    background-color: #f7f7f7;
+    padding-bottom: 40px;
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: 111;
+}
