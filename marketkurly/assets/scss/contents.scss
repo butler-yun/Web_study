@@ -428,3 +428,18 @@
         }
     }
 }
+
+/************ main bnr ************/
+.main-bnr {
+    max-width: 1050px;
+    width: 100%;
+    margin: 0 auto;
+
+    &__link {
+        display: block;
+        width: 100%;
+        &--img {
+            width: 100%;
+        }
+    }
+}

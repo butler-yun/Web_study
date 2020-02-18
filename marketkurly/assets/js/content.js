@@ -57,4 +57,54 @@ function scrollMove() {
     }
 }
 
-window.addEventListener('scroll', scrollMove)
+window.addEventListener('scroll', scrollMove);
+
+
+/* ******************************* */
+/* ********** slick ********** */
+/* ******************************* */
+
+
+$(document).ready(function(){
+    $('.main-slide').slick({
+        infinite: true,
+        autoplay: true,
+        speed:300,
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1
+    });
+});
+
+$(document).ready(function(){
+    $('.main-product').slick({
+        infinite: false,
+        autoplay: false,
+        speed:300,
+        dots: false,
+        slidesToShow: 4,
+        slidesToScroll: 4
+    });
+});
+
+$(document).ready(function(){
+    $('.main-product-three').slick({
+        infinite: false,
+        autoplay: false,
+        speed:300,
+        dots: false,
+        slidesToShow: 3,
+        slidesToScroll: 3
+    });
+});
+
+$(document).ready(function(){
+    $('.insta').slick({
+        infinite: false,
+        autoplay: false,
+        speed:300,
+        dots: false,
+        slidesToShow: 6,
+        slidesToScroll: 6
+    });
+});
