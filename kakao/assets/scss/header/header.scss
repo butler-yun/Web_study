@@ -1,0 +1,136 @@
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    &:hover {
+        background-color: #fff;
+    }
+
+    // ::Start - nav
+    .nav {
+        .gnb {
+            display: flex;
+
+            &__list {
+                &__link {
+                    width: 100%;
+                    height: 60px;
+                    line-height: 60px;
+                    padding: 0 20px;
+                    display: block;
+                    font-weight: 600;
+
+                    &:hover {
+                        text-decoration: none;
+                        border-bottom: 3px solid #1e1e1e;
+                    }
+                }
+
+                &:hover .submenu-area {
+                    display: block;
+                }
+
+                .submenu-area {
+                    width: 100%;
+                    background-color: #fff;
+                    border-top: 1px solid #d4d4d4;
+                    border-bottom: 1px solid #d4d4d4;
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+
+                    .submenu {
+                        max-width: 1280px;
+                        margin: 0 auto;
+                        display: flex;
+                        justify-content: space-around;
+
+                        &__list {
+                            flex: 1 1 100%;
+                            text-align: center;
+                            font-weight: 600;
+                            border-left: 1px solid #d4d4d4;
+                            padding: 60px 0;
+
+                            &:last-child {
+                                border-right: 1px solid #d4d4d4;
+                            }
+
+                            &-underline {
+                                display: inline-block;
+                                padding-bottom: 5px;
+                                border-bottom: none;
+                            }
+
+                            &__link {
+                                width: 100%;
+                                display: block;
+                                padding: 6px 0;
+                                
+                                &:hover .submenu__list-underline {
+                                    padding-bottom: 4px;
+                                    border-bottom: 1px solid #1e1e1e;
+                                }
+                            }
+
+                            &--title {
+                                font-size: 0.875rem;
+                                padding-bottom: 20px;
+                            }
+
+                            .submenu2 {
+                                .submenu__list {
+                                    border-left: none;
+                                    border-right: none;
+                                    padding: 0;
+
+                                    &__link {
+                                        font-size: 0.8125rem;
+                                        color: #666;
+
+                                        &:hover {
+                                            color: #1e1e1e;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // ::End - nav
+
+    .language {
+        display: flex;
+        text-transform: uppercase;
+
+        &__list {
+            &__link {
+                display: block;
+                padding: 0 5px;
+                text-decoration: none;
+                color: #666;
+
+                &--active {
+                    color: #1e1e1e;
+                    font-weight: 600;
+                }
+
+                &:hover {
+                    color: #1e1e1e;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
