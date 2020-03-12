@@ -1,3 +1,5 @@
+@import '../mixins';
+
 .header {
     width: 100%;
     height: 60px;
@@ -12,11 +14,78 @@
         background-color: #fff;
     }
 
+    @include tablet {
+        & {
+            justify-content: space-between;
+
+            &:hover {
+                background-color: #1e1e1e;
+                color: #fff;
+            }
+
+            &:hover .logo__link-img.bk {
+                display: none;
+            }
+
+            &:hover .logo__link-img.wh {
+                display: block;
+            }
+        }
+
+    }
+
+    .logo {
+        order: 1;
+
+        &__link {
+            &-img {
+                &.wh {
+                    display: none;
+                }
+            }
+        }
+
+        @include tablet {
+            & {
+                order: 2;
+            }
+        }
+    }
+
     // ::Start - nav
     .nav {
+        order: 2;
+
+        @include tablet {
+            & {
+                order: 1;
+            }
+        }
+
+        .mobile-gnb {
+            order: 1;
+
+            &__icon {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                font-size: 1.875rem;
+            }
+
+            @include desktop {
+                & {
+                    display: none;
+                }
+            }
+        }
+
         .gnb {
             display: flex;
 
+            /* desktop */
             &__list {
                 &__link {
                     width: 100%;
@@ -29,6 +98,14 @@
                     &:hover {
                         text-decoration: none;
                         border-bottom: 3px solid #1e1e1e;
+                    }
+
+                    &--icon {
+                        @include desktop {
+                            & {
+                                display: none;
+                            }
+                        }
                     }
                 }
 
@@ -73,7 +150,7 @@
                                 width: 100%;
                                 display: block;
                                 padding: 6px 0;
-                                
+
                                 &:hover .submenu__list-underline {
                                     padding-bottom: 4px;
                                     border-bottom: 1px solid #1e1e1e;
@@ -105,6 +182,109 @@
                     }
                 }
             }
+
+
+            @include tablet {
+                & {
+                    width: 100%;
+                    height: 100vh;
+                    overflow-y: scroll;
+                    background-color: #1e1e1e;
+                    color: white;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+
+                    .mobile-menu__topmenu {
+                        padding-bottom: 30px;
+                    }
+
+                    &__list {
+                        border-bottom: 1px solid #3e3b3b;
+
+                        &__link {
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+
+                        .submenu-area {
+                            background-color: #1e1e1e;
+                            border: none;
+                            display: block;
+                            position: static;
+                            max-height: 0;
+                            overflow: hidden;
+
+                            .submenu {
+                                flex-direction: column;
+                                align-items: flex-start;
+                                padding: 0 20px;
+
+                                &__list {
+                                    padding: 0;
+                                    border-left: none;
+                                    text-align: left;
+                                    width: 100%;
+
+                                    &:hover {
+                                        background-color: #4a4a4a;
+                                    }
+
+                                    &:first-child {
+                                        border-top: 1px solid white;
+                                    }
+
+                                    &__link {
+                                        padding: 20px;
+
+                                        &:hover .submenu__list-underline {
+                                            border-bottom: none;
+                                        }
+                                    }
+
+                                    &--title {
+                                        padding-bottom: 20px;
+                                    }
+
+                                    .submenu2 {
+                                        display: none;
+
+                                        .submenu__list {
+                                            &:first-child {
+                                                border-top: none;
+                                            }
+
+                                            &__link {
+                                                &:hover {
+                                                    color: white;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            /* mobile */
+            &.mobile-menu {
+                .mobile-menu__topmenu {
+                    @include desktop {
+                        & {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            @include tablet {
+                & {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -113,6 +293,13 @@
     .language {
         display: flex;
         text-transform: uppercase;
+        order: 3;
+
+        @include tablet {
+            & {
+                display: none;
+            }
+        }
 
         &__list {
             &__link {
@@ -129,6 +316,134 @@
                 &:hover {
                     color: #1e1e1e;
                     font-weight: 600;
+                }
+            }
+        }
+    }
+
+    .mobile-util {
+        order: 3;
+
+        &__icon {
+            display: block;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.875rem;
+            cursor: pointer;
+        }
+
+        @include desktop {
+            & {
+                display: none;
+            }
+        }
+    }
+
+    .mobile-menu {
+        &.mobile-gnbmenu {}
+
+        &__topmenu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+        }
+
+        &__icon {
+            width: 60px;
+            height: 60px;
+            font-size: 1.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+    }
+
+
+    .mobile-utilpage,
+    .utilpage-menu {
+        width: 100%;
+        background-color: #1e1e1e;
+        color: #fff;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .mobile-utilpage {
+        height: 100vh;
+        overflow-y: scroll;
+        z-index: 200;
+        display: none;
+
+        @include desktop {
+            & {
+                display: none;
+            }
+        }
+
+        .utilpage-menu {
+            padding-top: 30px;
+            top: 60px;
+
+            &__list {
+                border-top: 1px solid #3e3b3b;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                &__link {
+                    display: flex;
+                    align-items: center;
+                    padding: 15px;
+
+                    @include mobile {
+                        & {
+                            padding: 10px;
+                        }
+                    }
+
+                    &--icon {
+                        width: 45px;
+
+                        @include mobile {
+                            & {
+                                width: 30px;
+                            }
+                        }
+                    }
+
+                    &--tit {
+                        font-size: 1.375rem;
+                        margin-left: 15px;
+
+                        @include mobile {
+                            & {
+                                font-size: 1.125rem;
+                                margin-left: 10px;
+                            }
+                        }
+                    }
+                }
+
+                &__download-btn {
+                    width: 60px;
+                    height: 60px;
+                    color: #3e3b3b;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    font-size: 1.875rem;
+
+                    @include mobile {
+                        & {
+                            font-size: 1.25rem;
+                        }
+                    }
                 }
             }
         }

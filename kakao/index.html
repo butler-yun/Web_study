@@ -14,16 +14,38 @@
     <header class="header">
         <h1 class="logo">
             <a href="index.html" class="logo__link">
-                <img class="logo__link-img" src="assets/images/logo.png" alt="kakao logo image">
+                <img class="logo__link-img bk" src="assets/images/logo.png" alt="kakao logo image">
+                <img class="logo__link-img wh" src="assets/images/logo_wh.png" alt="kakao logo image">
             </a>
         </h1>
 
         <!-- ::Start - Gnb -->
         <nav class="nav">
-            <ul class="gnb">
+            <!-- ::Start - mobile trigger btn -->
+            <div class="mobile-gnb">
+                <span class="mobile-gnb__icon m-gnb-btn">
+                    <i class="fas fa-bars"></i>
+                </span>
+            </div>
+            <!-- ::End - mobile trigger btn -->
+
+            <ul class="gnb mobile-menu">
+                <div class="mobile-menu__topmenu">
+                    <span class="mobile-menu__icon gnb-close-btn">
+                        <i class="fas fa-times"></i>
+                    </span>
+                    <a href="index.html" class="logo__link">
+                        <img class="logo__link-img" src="assets/images/logo_wh.png" alt="kakao logo image">
+                    </a>
+                    <span style="width: 60px; height: 60px;"></span>
+                </div>
+
                 <li class="gnb__list">
                     <a href="#none" class="gnb__list__link">
                         카카오
+                        <span class="gnb__list__link--icon">
+                            <i class="fas fa-chevron-up"></i>
+                        </span>
                     </a>
                     <!-- ::Start submenu -->
                     <div class="submenu-area">
@@ -147,6 +169,9 @@
                 <li class="gnb__list">
                     <a href="#none" class="gnb__list__link">
                         투자정보
+                        <span class="gnb__list__link--icon">
+                            <i class="fas fa-chevron-up"></i>
+                        </span>
                     </a>
                     <!-- ::Start submenu -->
                     <div class="submenu-area">
@@ -292,6 +317,9 @@
                 <li class="gnb__list">
                     <a href="#none" class="gnb__list__link">
                         서비스
+                        <span class="gnb__list__link--icon">
+                            <i class="fas fa-chevron-up"></i>
+                        </span>
                     </a>
                     <!-- ::Start submenu -->
                     <div class="submenu-area">
@@ -497,7 +525,7 @@
                                     </li>
                                     <li class="submenu__list">
                                         <a href="#none" class="submenu__list__link">
-                                            <span class="submenu__list-underline">카카오네비</span>
+                                            <span class="submenu__list-underline">카카오내비</span>
                                         </a>
                                     </li>
                                     <li class="submenu__list">
@@ -541,6 +569,9 @@
                 <li class="gnb__list">
                     <a href="#none" class="gnb__list__link">
                         소셜임팩트
+                        <span class="gnb__list__link--icon">
+                            <i class="fas fa-chevron-up"></i>
+                        </span>
                     </a>
                     <!-- ::Start submenu -->
                     <div class="submenu-area">
@@ -658,6 +689,7 @@
                 </li>
             </ul>
         </nav><!-- ::End - Gnb -->
+
         <ul class="language">
             <li class="language__list">
                 <a href="#none" class="language__list__link language__list__link--active">
@@ -670,6 +702,370 @@
                 </a>
             </li>
         </ul>
+
+        <!-- ::Start - mobile util menu -->
+        <div class="mobile-util">
+            <span class="mobile-util__icon util-btn">
+                <i class="fas fa-align-right hambug"></i>
+            </span>
+        </div>
+        <!-- ::End - mobile util menu -->
+
+
+        <!-- ::Start - mobile util page -->
+        <div class="mobile-utilpage mobile-menu">
+            <div class="mobile-menu__topmenu">
+                <span style="width: 60px; height: 60px;"></span>
+                <a href="index.html" class="logo__link">
+                    <img class="logo__link-img" src="assets/images/logo_wh.png" alt="kakao logo image">
+                </a>
+                <span class="mobile-menu__icon close-btn">
+                    <i class="fas fa-times"></i>
+                </span>
+            </div>
+
+            <ul class="utilpage-menu">
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/daum.jpg" alt="daum icon" class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">Daum</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=net.daum.android.daum" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/news.jpg" alt="daum news icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">Daum 뉴스</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/search.jpg" alt="daum search icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">Daum 검색</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/kakaotalk.jpg" alt="kakaotalk icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오톡</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.kakao.talk" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/story.jpg" alt="kakao story icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오스토리</span>
+                        <a href="https://play.google.com/store/apps/details?id=com.kakao.story" target="_blank"
+                            class="utilpage-menu__list__download-btn">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/cheez.jpg" alt="cheez icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오톡 치즈</span>
+                        <a href="https://play.google.com/store/apps/details?id=com.kakao.cheez" target="_blank"
+                            class="utilpage-menu__list__download-btn">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/daum_mail.jpg" alt="daum mail icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">Daum 메일</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=net.daum.android.mail" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/daum_cafe.jpg" alt="daum cafe icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">Daum 카페</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=net.daum.android.cafe" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/agit.jpg" alt="azit icon" class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">아지트</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=io.agit" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/tistory.jpg" alt="tistory icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">티스토리</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=net.daum.android.tistoryapp" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/brunch.jpg" alt="brunch icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">브런치</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.daumkakao.android.brunchapp"
+                        target="_blank" class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/melon.jpg" alt="melon azi icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">멜론 아지톡</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.iloen.aztalk" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/mail.jpg" alt="kakao mail icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오메일</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/page.jpg" alt="kakao page icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오페이지</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.kakao.page" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/kakaotv.jpg" alt="kakao tv icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오TV</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.kakao.playball" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/kakaomusic.jpg" alt="kakaomusic icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오뮤직</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.kakao.music" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/kf.jpg" alt="kakao friends icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오프렌즈</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/webtoon.jpg" alt="daum webtoon icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">Daum 웹툰</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=net.daum.android.webtoon" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/1boon.jpg" alt="iboon icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">1boon</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/melon.jpg" alt="melon icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">멜론</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.iloen.melon" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/melon_ticket.jpg" alt="melon ticket icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">멜론티켓</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.iloen.melonticket" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/gift.jpg" alt="kakao gift icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오톡 선물하기</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/style.jpg" alt="kakao style icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오스타일</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.kakao.style" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/shoping.jpg" alt="kakao shopping icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오톡 쇼핑하기</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/how.jpg" alt="shopping how icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">쇼핑하우</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/games.jpg" alt="kakao games icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오게임즈</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/pay.jpg" alt="kakao pay icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오페이</span>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/t.jpg" alt="kakao t icon" class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오 T</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.kakao.taxi" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/t_2.jpg" alt="kakao t icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오 T 대리</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.kakao.wheel" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/nav.jpg" alt="kakao nav icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오내비</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.locnall.KimGiSa" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/map.jpg" alt="kakao map icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오맵</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=net.daum.android.map" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/bus.jpg" alt="kakao bus icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오버스</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.astroframe.seoulbus" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/subway.jpg" alt="kakao subway icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오지하철</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=net.orizinal.subway" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/hair.jpg" alt="kakao hair icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오 헤어샵</span>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.kakao.beauty.hairshop" target="_blank"
+                        class="utilpage-menu__list__download-btn">
+                        <i class="fas fa-download"></i>
+                    </a>
+                </li>
+                <li class="utilpage-menu__list">
+                    <a href="index.html" class="utilpage-menu__list__link">
+                        <img src="assets/images/icon/with.jpg" alt="kakao with icon"
+                            class="utilpage-menu__list__link--icon">
+                        <span class="utilpage-menu__list__link--tit">카카오같이가치</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <!-- ::End - mobile util menu page-->
     </header><!-- ::End - header -->
 
     <!-- ::Start - Contents -->
@@ -678,6 +1074,7 @@
 
     <!-- :: Script -->
     <script src="https://kit.fontawesome.com/7117f6c7a4.js" crossorigin="anonymous"></script>
+    <script src="assets/js/contents.js"></script>
 </body>
 
 </html>
