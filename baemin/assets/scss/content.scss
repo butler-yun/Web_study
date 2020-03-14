@@ -1,0 +1,130 @@
+@import './mixins';
+
+#fullpage {
+    .section {
+        position: relative;
+        background-color: #2ac1bc;
+
+        // title
+        &__title {
+            width: 100%;
+            max-width: 440px;
+            position: absolute;
+            top: 20%;
+            left: 50px;
+
+            &.fs300 {
+                @include mobile {
+                    max-width: 300px;
+                }
+            }
+
+            @include mobile {
+                & {
+                    max-width: 365px;
+                    top: 16%;
+                    left: 20px;
+                }
+            }
+
+            &__img {
+                width: 100%;
+            }
+        }
+
+        // img
+        &__img {
+            width: 100%;
+            max-width: 395px;
+            position: absolute;
+            bottom: 15%;
+            right: 0;
+            transform: translateX(-50%);
+
+            @include mobile {
+                & {
+                    max-width: 340px;
+                    bottom: 30px;
+                    right: -45%;
+                }
+            }
+
+            &.img03 {
+                max-width: 400px;
+                bottom: -1px;
+                right: -15%;
+
+                @include mobile {
+                    right: -54%;
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+
+            &.load {
+                max-width: 230px;
+                height: 454px;
+                bottom: 16%;
+                right: 21%;
+
+                @include mobile {
+                    max-width: 190px;
+                    bottom: 5%;
+                    right: 13%;
+                }
+            }
+
+            &.bike {
+                max-width: 200px;
+                bottom: -2%;
+                right: 12%;
+
+                @include mobile {
+                    max-width: 190px;
+                    bottom: 0%;
+                    right: -12%;
+                }
+            }
+        }
+
+        // description
+        &__desc {
+            line-height: 1.5;
+            font-size: 0.875rem;
+            margin-top: 20px;
+
+            &--sub {
+                display: block;
+                line-height: 3rem;
+            }
+        }
+    }
+
+    .main {
+        background-image: url(../images/main_img_01.jpg);
+        background-size: cover;
+        background-position: center;
+
+        &__down-btn {
+            width: 260px;
+            height: 295px;
+            padding-right: 20px;
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+
+            @include mobile {
+                & {
+                    padding-right: 0;
+                }
+            }
+
+            &__img {
+                width: 100%;
+            }
+        }
+    }
+}

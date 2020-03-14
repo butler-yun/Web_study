@@ -1,0 +1,109 @@
+@import './mixins';
+
+body {
+
+    &.fp-viewing-0,
+    &.fp-viewing-5 {
+        .fp-right {
+            display: none;
+        }
+    }
+
+    &.fp-viewing-5 {
+        .header, .scroll-btn {
+            display: none;
+        }
+    }
+}
+
+// scroll btn 
+.scroll-btn {
+    width: 68px;
+    height: 68px;
+    position: absolute;
+    left: 50%;
+    bottom: 3%;
+    transform: translateX(-50%);
+    z-index: 300;
+
+    @include tablet {
+        & {
+            left: 12%;
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+
+// navigation btn 
+#fp-nav {
+    ul {
+        li {
+
+            &:first-child,
+            &:last-child {
+                display: none;
+            }
+        }
+    }
+
+    @include mobile {
+        & {
+            display: none;
+        }
+    }
+}
+
+// download btn 
+.down-bk {
+    position: absolute;
+    top: 90px;
+    right: 50px;
+
+    @include mobile {
+        top: 20px;
+        right: -15px;
+    }
+
+    &__link {
+        display: block;
+        width: 100%;
+        max-width: 200px;
+    }
+
+    &__img {
+        width: 100%;
+    }
+}
+
+
+// sns
+
+.sns {
+    margin-right: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include tablet {
+        & {
+            display: none;
+        }
+    }
+
+    &__list {
+
+        &__link {
+            width: 50px;
+            height: 50px;
+            padding: 0 5px;
+            font-size: 2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
